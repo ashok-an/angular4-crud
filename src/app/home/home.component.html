@@ -1,0 +1,23 @@
+<div style="text-align:left;background-color:lightgreen;padding:10px;">
+  <a>[+] Add new user</a>
+</div>
+
+<h5>User list:</h5>
+<table>
+  <thead>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Age</th>
+    <th>Company ID</th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tr *ngFor="let user of users">
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td class="numeral">{{user.age}}</td>
+    <td>{{user.companyId}}</td>
+    <td class="edit-button"><a>Edit</a></td>
+    <td class="delete-button"><a>Delete</a></td>
+  </tr>
+</table>
