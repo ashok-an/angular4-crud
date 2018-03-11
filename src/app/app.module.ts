@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HttpModule } from '@angular/http';
 import { UserComponent } from './user/user.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 
 
@@ -15,7 +16,8 @@ import { UserComponent } from './user/user.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    UserComponent
+    UserComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { UserComponent } from './user/user.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent},
-      { path: 'user', component: UserComponent}
+      { path: 'user', component: UserComponent},
+      { path: 'updateuser/:id', component: UpdateUserComponent}
     ])
   ],
   providers: [],

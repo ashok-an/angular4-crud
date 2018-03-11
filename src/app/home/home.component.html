@@ -17,7 +17,7 @@
     <td>{{user.lastName}}</td>
     <td class="numeral">{{user.age}}</td>
     <td>{{user.companyId}}</td>
-    <td class="edit-button"><a (click)="editUser(user.id)" class="clickable">Edit</a></td>
+    <td class="edit-button" [routerLink]="['/updateuser', user.id]"><a class="clickable">Edit</a></td>
     <td class="delete-button"><a (click)="deleteUser(user.id)" class="clickable">Delete</a></td>
   </tr>
 </table>

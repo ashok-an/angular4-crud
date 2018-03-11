@@ -2,24 +2,52 @@
   <a routerLink="/"> &lt; Back </a>
 
   <h5>Add New User</h5>
-  <form id="userForm" name="userForm" #userData="ngForm" (ngSubmit)="addNewUser(userData.value)" >
-    <label>ID  </label>
-    <input type="number" name="_id" id="_id" placeholder="id" ngModel>
-    <br> 
-    <label>First Name  </label>
-    <input type="text" name="firstName" id="firstName" placeholder="first-name" ngModel>
-    <br> 
-    <label>Last Name  </label>
-    <input type="text" name="lastName" id="lastName" placeholder="last-name" ngModel>
-    <br> 
-    <label>Age  </label>
-    <input type="number" name="age" id="age" placeholder="age" ngModel>
-    <br> 
-    <label>Company ID  </label>
-    <input type="text" name="companyId" id="companyId" placeholder="company-id" ngModel>
-    <br>
-    <input type="submit" value="Add Name">
-
+  <form id="userForm" name="userForm" #userData="ngForm" (ngSubmit)="addNewUser(userData.value)">
+    <table>
+      <tr>
+        <td>
+          <label>ID </label>
+        </td>
+        <td>
+          <input type="number" name="_id" id="_id" placeholder="id" ngModel>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>First Name </label>
+        </td>
+        <td>
+          <input type="text" name="firstName" id="firstName" placeholder="first-name" ngModel>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Last Name </label>
+        </td>
+        <td>
+          <input type="text" name="lastName" id="lastName" placeholder="last-name" ngModel>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Age </label>
+        </td>
+        <td>
+          <input type="number" name="age" id="age" placeholder="age" ngModel>
+        </td>
+      </tr>
+      <td>
+        <label>Company ID </label>
+      </td>
+      <td>
+        <input type="text" name="companyId" id="companyId" placeholder="company-id" ngModel>
+      </td>
+      <tr>
+        <td></td>
+        <td style="text-align:right">
+          <input type="submit" value="Add User">
+        </td>
+    </table>
   </form>
   <br/>
   <h5 *ngIf="isAdded">New user successfully added</h5>

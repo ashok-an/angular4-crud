@@ -1,0 +1,56 @@
+<div style="text-align:left; padding: 10px;">
+  <a routerLink="/"> &lt; Back </a>
+
+  <p *ngIf="invalidId">ID: {{id}} is invalid</p>
+  <div *ngIf="! invalidId">
+    <h5>Edit User</h5>
+    <form id="userForm" name="userForm" #userData="ngForm" (ngSubmit)="updateUser(userData.value)">
+      <table>
+        <tr>
+          <td>
+            <label>ID </label>
+          </td>
+          <td>
+            <input type="number" name="id" id="id" placeholder="id" [(ngModel)]="data.id">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>First Name </label>
+          </td>
+          <td>
+            <input type="text" name="firstName" id="firstName" placeholder="first-name" [(ngModel)]="data.firstName">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Last Name </label>
+          </td>
+          <td>
+            <input type="text" name="lastName" id="lastName" placeholder="last-name" [(ngModel)]="data.lastName">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Age </label>
+          </td>
+          <td>
+            <input type="number" name="age" id="age" placeholder="age" [(ngModel)]="data.age">
+          </td>
+        </tr>
+        <td>
+          <label>Company ID </label>
+        </td>
+        <td>
+          <input type="text" name="companyId" id="companyId" placeholder="company-id" [(ngModel)]="data.companyId">
+        </td>
+        <tr>
+          <td></td>
+          <td style="text-align:right">
+            <input type="submit" value="Update User">
+          </td>
+      </table>
+    </form>
+    <br/>
+    <h5 *ngIf="isUpdated">User updated successfully added</h5>
+  </div>
