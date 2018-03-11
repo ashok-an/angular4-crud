@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Assumption:
 * REST-API server is running on http://localhost:9991
-`npm install json-server`
+`npm install json-server; `
 `json-server -p 9991 -w db-file.json`
 
 * DB file: A json file like below:
