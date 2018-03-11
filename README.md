@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
-## Assumption:
+## Assumptions
 * REST-API server is running on http://localhost:9991
 ```
 $ npm install json-server
